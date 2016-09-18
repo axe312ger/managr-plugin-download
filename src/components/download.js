@@ -15,9 +15,8 @@ export const DownloadComponent = React.createClass({
     } catch (e) {}
 
     if (isFileSaverSupported) {
-      this.context.managr.fileAPI.readAsBlob(file)
+      return this.context.managr.fileAPI.readAsBlob(file)
         .then((blob) => saveAs(blob, file.name))
-      return
     }
 
     window.alert([
