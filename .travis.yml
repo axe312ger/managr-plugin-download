@@ -1,3 +1,8 @@
 language: node_js
 node_js:
   - "6"
+cache:
+  directories:
+    - node_modules
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t aba6fce6-2ea8-4a36-bbb1-e94b007b4890
