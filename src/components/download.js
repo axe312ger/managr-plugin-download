@@ -1,7 +1,7 @@
 import React from 'react'
 import { saveAs } from 'file-saver'
 
-export const downloadComponent = React.createClass({
+export const DownloadComponent = React.createClass({
   render () {
     return <button onClick={this.read}>Download</button>
   },
@@ -15,9 +15,8 @@ export const downloadComponent = React.createClass({
     } catch (e) {}
 
     if (isFileSaverSupported) {
-      this.context.managr.fileAPI.readAsBlob(file)
+      return this.context.managr.fileAPI.readAsBlob(file)
         .then((blob) => saveAs(blob, file.name))
-      return
     }
 
     window.alert([

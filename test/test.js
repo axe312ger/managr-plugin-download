@@ -24,5 +24,5 @@ test('returns download component', (t) => {
 
   // @todo continue with react specific testing
   t.is(typeof downloadComponent, 'object')
-  t.is(downloadComponent.type.displayName, 'downloadComponent')
+  t.is(downloadComponent.type.displayName, 'DownloadComponent')
 })
