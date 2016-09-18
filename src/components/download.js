@@ -1,7 +1,7 @@
 import React from 'react'
 import { saveAs } from 'file-saver'
 
-export const downloadComponent = React.createClass({
+export const DownloadComponent = React.createClass({
   render () {
     return <button onClick={this.read}>Download</button>
   },
