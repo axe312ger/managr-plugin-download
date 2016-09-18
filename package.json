@@ -8,7 +8,7 @@
     "dev": "babel --watch --out-dir dist src",
     "lint": "eslint src test",
     "test": "npm run lint && npm run coverage-tests",
-    "coverage-tests": "NODE_ENV=test nyc --reporter=lcov --reporter=text npm run unit-tests",
+    "coverage-tests": "NODE_ENV=test nyc --reporter=lcov --reporter=text --check-coverage --lines 100 npm run unit-tests",
     "unit-tests": "ava --verbose",
     "unit-tests-watch": "ava --verbose --watch"
   },
