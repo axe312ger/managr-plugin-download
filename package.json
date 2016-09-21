@@ -16,11 +16,12 @@
     "unit-tests-watch": "ava --verbose --watch",
     "preversion": "npm test",
     "version": "npm run build && git add -f dist",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/axe312ger/managr-plugin-download.git"
+    "url": "https://github.com/axe312ger/managr-plugin-download.git"
   },
   "keywords": [
     "managr",
@@ -53,7 +54,8 @@
     "nyc": "^8.3.0",
     "react-addons-test-utils": "^15.3.1",
     "react-dom": "^15.3.1",
-    "rimraf": "^2.5.4"
+    "rimraf": "^2.5.4",
+    "semantic-release": "^4.3.5"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.14.0",
