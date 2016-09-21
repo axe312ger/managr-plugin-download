@@ -43,6 +43,7 @@
     "babel-eslint": "^6.1.2",
     "babel-plugin-istanbul": "^2.0.1",
     "cross-env": "^2.0.1",
+    "cz-conventional-changelog": "^1.2.0",
     "enzyme": "^2.4.1",
     "eslint": "^3.5.0",
     "eslint-config-standard": "^6.0.0",
@@ -79,5 +80,10 @@
     ],
     "sourceMap": false,
     "instrument": false
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
