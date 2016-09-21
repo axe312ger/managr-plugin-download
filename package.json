@@ -5,6 +5,7 @@
   "main": "dist/cjs/index.js",
   "module": "dist/es-modules/index.js",
   "scripts": {
+    "build": "npm run build-cjs && npm run build-es-modules",
     "build-cjs": "cross-env BABEL_ENV=cjs babel --out-dir dist/cjs src",
     "build-es-modules": "cross-env BABEL_ENV=es-modules babel --out-dir dist/es-modules src",
     "prebuild": "rimraf dist",
@@ -35,7 +36,6 @@
   "homepage": "https://github.com/axe312ger/managr-plugin-download#readme",
   "files": [
     "dist",
-    "src",
     "README.md"
   ],
   "devDependencies": {
