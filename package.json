@@ -1,17 +1,28 @@
 {
   "name": "managr-plugin-download",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Adds download support for single files.",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es-modules/index.js",
   "scripts": {
-    "build": "babel --out-dir dist src",
+    "build-cjs": "cross-env BABEL_ENV=cjs babel --out-dir dist/cjs src",
+    "build-es-modules": "cross-env BABEL_ENV=es-modules babel --out-dir dist/es-modules src",
+    "prebuild": "rimraf dist",
     "dev": "babel --watch --out-dir dist src",
     "lint": "eslint src test",
     "test": "npm run lint && npm run coverage-tests",
-    "coverage-tests": "NODE_ENV=test nyc --reporter=lcov --reporter=text --check-coverage --lines 100 npm run unit-tests",
+    "coverage-tests": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text --check-coverage --lines 100 npm run unit-tests",
     "unit-tests": "ava --verbose",
-    "unit-tests-watch": "ava --verbose --watch"
+    "unit-tests-watch": "ava --verbose --watch",
+    "preversion": "npm test",
+    "version": "npm run build && git add -f dist",
+    "postversion": "git push && git push --tags"
   },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
   "ava": {
     "require": [
       "babel-register"
@@ -35,6 +46,7 @@
     "ava": "^0.16.0",
     "babel-eslint": "^6.1.2",
     "babel-plugin-istanbul": "^2.0.1",
+    "cross-env": "^2.0.1",
     "enzyme": "^2.4.1",
     "eslint": "^3.5.0",
     "eslint-config-standard": "^6.0.0",
@@ -45,7 +57,8 @@
     "eslint-plugin-standard": "^2.0.0",
     "nyc": "^8.3.0",
     "react-addons-test-utils": "^15.3.1",
-    "react-dom": "^15.3.1"
+    "react-dom": "^15.3.1",
+    "rimraf": "^2.5.4"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.14.0",
