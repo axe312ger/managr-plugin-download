@@ -9,7 +9,6 @@
     "build-cjs": "cross-env BABEL_ENV=cjs babel --out-dir dist/cjs src",
     "build-es-modules": "cross-env BABEL_ENV=es-modules babel --out-dir dist/es-modules src",
     "prebuild": "rimraf dist",
-    "dev": "babel --watch --out-dir dist src",
     "lint": "eslint src test",
     "test": "npm run lint && npm run coverage-tests",
     "coverage-tests": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text --check-coverage --lines 100 npm run unit-tests",
