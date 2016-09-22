@@ -45,5 +45,5 @@ Also make sure you check out all available npm scripts via `npm run`.
 
 ## Contributing
 
-Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/axe312ger/mmanagr-plugin-download/issues/new).
+Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/axe312ger/managr-plugin-download/issues/new).
 But before doing anything, please read the [CONTRIBUTING.md](./CONTRIBUTING.md) guidelines.

@@ -4,7 +4,7 @@
 *Atom Dev Team* - [CONTRIBUTING.md](https://github.com/atom/atom/blob/master/CONTRIBUTING.md)
 
 ## Commit conventions
-To keep the automated release train running, every commit should follow the [conventional changelog standard](https://github.com/conventional-changelog/conventional-changelog-angular/blob/master/convention.md) introduced by angular.
+To keep the automated release and changelog engine running, every commit should follow the [conventional changelog standard](https://github.com/conventional-changelog/conventional-changelog-angular/blob/master/convention.md) introduced by angular.
 
 After merging into our master branch, this will allow [semantic release](https://github.com/semantic-release/semantic-release) to decide what kind of version to release. An automated changelog will also be created.
 
